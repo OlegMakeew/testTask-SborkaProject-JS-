@@ -1,0 +1,24 @@
+.building {
+    height: 100vh;
+    .bs-stepper-header {
+        @include flex($justify: flex-start, $align:flex-start);
+    }
+    .bs-stepper-circle {
+        height: 5px;
+        width: 20px;
+        border-radius: 50%;
+        @include flex; 
+    }
+    .bs-stepper .line, .bs-stepper-line {
+        -ms-flex: 1 0 32px;
+        flex: 1 0 32px;
+        width: 250px;
+        min-width: 100px;
+        min-height: 1px;
+        background-color: rgba(0,0,0,.12);
+        margin-top: 40px;
+    }
+    .step-trigger {
+        flex-direction: column;
+    }
+}     

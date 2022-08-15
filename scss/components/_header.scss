@@ -1,0 +1,36 @@
+.header {
+    padding: 30px 30px;
+    @include flex($justify: space-between);
+    border-bottom: #CFCFCF 1px solid;
+    .nav {
+        &__list {
+            @include flex($justify: space-between);
+            list-style-type: none;
+            &-item {
+                padding-right: 32px;
+                &:last-child{
+                    padding-right: 0;
+                }
+                a {
+                    color: #000000;
+                    text-decoration: none;
+                    @include font(14px, 400, 16px)
+                }
+            }
+        }
+    }
+    &__info {
+        @include flex($justify: center);
+        &-search {
+            width: 24px;
+            height: 24px;
+            padding-right: 30px;
+        }
+        &-cart {
+            .cart {
+                border: none;
+                background-color: #fff;
+            }
+        }
+    }
+}

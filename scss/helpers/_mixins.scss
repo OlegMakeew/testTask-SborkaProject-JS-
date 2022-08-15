@@ -1,0 +1,13 @@
+@mixin font($size, $weigth, $height) {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: $weigth;
+	font-size: $size;
+	line-height: $height;
+};
+
+@mixin flex($justify:center, $align:center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}

@@ -1,0 +1,98 @@
+.sidebar {
+    border-left: #CFCFCF 1px solid;
+    @include font(14px, 400, 16px);
+    min-height: 100vh;
+    &__titles {
+        @include font(18px, 700, 21px);
+        margin-bottom: 30px;
+    }
+    &__basket, &__promo, &__total {
+        width: 330px;
+        padding: 40px;
+        border-bottom: #CFCFCF 1px solid;
+    }
+    &__basket {
+        .basket__list {
+            list-style-type: none;
+            &-item {
+                @include flex;
+                max-width: 330px;
+                max-height: 100px;
+                margin-bottom: 40px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .list-item {
+                    &__img {
+                        margin-right: 12px;
+                    }
+                    &__description {
+                        margin-bottom: 15px;
+                        margin-right: 45px;
+                    }
+                    &__info {
+                        div {
+                            @include flex($justify: flex-start, $align:flex-start);
+                            .prise {
+                                margin-left: 25px;
+                            }
+                        }
+                    }
+                    &__count {
+                        span {
+                            margin: 0 17px;
+                        }
+                    }
+                    &__close {
+                        @include flex;
+                        flex-direction: column;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+    &__promo {
+        .promo {
+            &__form {
+                input {
+                    background-color:  #EDEDF1;
+                    border: none;
+                    width: 225px;
+                    height: 40px;
+                    margin-right: 10px;
+                    @include font(14px, 400, 24px);
+                    color: #8E90A6;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                    &::placeholder {
+                        @include font(14px, 400, 24px);
+                        color: #8E90A6;
+                    }
+                }
+            }
+            &__button {
+                background-color: #3366FF;
+                color: #fff;
+                @include font(14px, 400, 24px);
+                padding: 8px 28px;
+                border: none;
+                border-radius: 3px;
+            }
+        }
+    }
+    &__total {
+        &-list {
+            list-style-type: none;
+            li {
+                @include flex($justify: space-between);
+                @include font(14px, 400, 21px);
+                margin-bottom: 24px;
+                &:last-child {
+                    @include font(18px, 700, 21px);
+                }
+            }
+        }
+    }
+}
