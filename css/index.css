@@ -94,15 +94,6 @@
   min-height: 100vh;
 }
 
-.sidebar__titles {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  margin-bottom: 30px;
-}
-
 .sidebar__basket, .sidebar__promo, .sidebar__total {
   width: 330px;
   padding: 40px;
@@ -279,6 +270,132 @@
   height: 100vh;
 }
 
+.building__container {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.building .titles {
+  margin-left: 31px;
+}
+
+.building__form .building__payType {
+  padding-left: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.building__form .building__payType span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 82px;
+}
+
+.building__form .building__payType span:last-child {
+  margin-right: 0;
+}
+
+.building__form .building__payType span input {
+  margin-right: 10px;
+}
+
+.building__form .building__payType span .custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.building__form .building__payType span .custom-radio + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.building__form .building__payType span .custom-radio + label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.building__form .building__payType span .custom-radio:checked + label::before {
+  border-color: #adb5bd;
+  background-color: #fff;
+  background-image: url("../../img/svg/Ellipse.svg");
+}
+
+.building__form .building__cardData {
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  -webkit-box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+          box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  max-width: 550px;
+  max-height: 300px;
+  padding: 20px 30px 46px;
+}
+
+.building__form .building__cardData .card__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.building__form .building__cardData .card__data input {
+  width: 490px;
+  height: 40px;
+  background-color: #EDEDF1;
+  border: none;
+  border-radius: 3px;
+}
+
 .building .bs-stepper-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,7 +427,7 @@
   -ms-flex: 1 0 32px;
   -webkit-box-flex: 1;
           flex: 1 0 32px;
-  width: 250px;
+  width: 220px;
   min-width: 100px;
   min-height: 1px;
   background-color: rgba(0, 0, 0, 0.12);
@@ -339,5 +456,14 @@ body, h3, h4, h5, h6, ul, div, span, p, input, button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.titles {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=index.css.map */

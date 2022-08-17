@@ -95,18 +95,58 @@
                     </div>
                     <div class="bs-stepper-content">
                         <div id="test-l-1" class="content">
-                        <p class="text-center">test 1</p>
-                        <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                            <p class="text-center">test 1</p>
+                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
                         </div>
                         <div id="test-l-2" class="content">
-                        <div class="text-center">
-
-                        </div>
-                        <button class="btn btn-primary" onclick="stepper.next()">Next</button>
-                        <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
+                            <p class="text-center">test 1</p>
+                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
+                            <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
                         </div>
                         <div id="test-l-3" class="content">
-                        <p class="text-center">test 3</p>
+                        <div class="building__info">
+                            <div class="building__container">
+                                <div class="titles">
+                                    Billing Information
+                                </div>
+                                <form action="" class="building__form">
+                                    <div class="building__payType">
+                                        <span>
+                                            <input class="custom-radio"  type="radio" id="contactChoice1"
+                                            name="contact" value="email">
+                                            <label for="contactChoice1">Pay with Credit Card</label>
+                                        </span>
+                                        <span>
+                                            <input class="custom-radio"  type="radio" id="contactChoice2"
+                                            name="contact" value="phone">
+                                            <label for="contactChoice2">
+                                                <img src="./img/PayPal.png" alt="">
+                                            </label>
+                                        </span>
+                                    </div>
+                                    <div class="building__cardData">
+                                        <div class="card__data card__data-name">
+                                            <label for=""> Name on card </label>
+                                            <input type="text">
+                                        </div>
+                                        <div class="card__data card__data-number">
+                                            <label for=""> Card number </label>
+                                            <input type="text">
+                                        </div>
+                                        <div>
+                                            <div class="card__data card__data-info">
+                                                <label for=""> Expire date </label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="card__data card__data-info">
+                                                <label for=""> CVV code <span>?</span> </label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                         <button class="btn btn-primary" onclick="stepper.next()">Next</button>
                         <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
                         </div>
@@ -121,7 +161,7 @@
         </section>
         <sidebar id="sidebar" class="sidebar" style="display: block">
             <div class="sidebar__basket">
-                <h4 class="sidebar__titles">
+                <h4 class="titles">
                     My basket
                 </h4>
                 <ul class="basket__list">
@@ -178,7 +218,7 @@
                 </ul>
             </div>
             <div class="sidebar__promo">
-                <h4 class="sidebar__titles">
+                <h4 class="titles">
                     Promo code
                 </h4>
                 <form action="" class="promo__form">

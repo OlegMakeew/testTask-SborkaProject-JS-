@@ -2,10 +2,6 @@
     border-left: #CFCFCF 1px solid;
     @include font(14px, 400, 16px);
     min-height: 100vh;
-    &__titles {
-        @include font(18px, 700, 21px);
-        margin-bottom: 30px;
-    }
     &__basket, &__promo, &__total {
         width: 330px;
         padding: 40px;
