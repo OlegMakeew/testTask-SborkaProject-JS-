@@ -281,6 +281,7 @@
 
 .building__form .building__payType {
   padding-left: 31px;
+  margin-bottom: 44px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,8 +369,27 @@
           box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   max-width: 550px;
-  max-height: 300px;
-  padding: 20px 30px 46px;
+  padding: 20px 30px 26px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: #555770;
+}
+
+.building__form .building__cardData div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .building__form .building__cardData .card__data {
@@ -394,6 +414,16 @@
   background-color: #EDEDF1;
   border: none;
   border-radius: 3px;
+  margin: 8px 0 20px;
+}
+
+.building__form .building__cardData .card__data-info input {
+  margin-right: 30px;
+  width: 100px;
+}
+
+.building__form .building__cardData .card__data-info:last-child input {
+  margin-right: 0;
 }
 
 .building .bs-stepper-header {
