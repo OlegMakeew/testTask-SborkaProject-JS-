@@ -104,51 +104,63 @@
                             <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
                         </div>
                         <div id="test-l-3" class="content">
-                        <div class="building__info">
-                            <div class="building__container">
-                                <div class="titles">
-                                    Billing Information
+                            <div class="building__info">
+                                <div class="building__container">
+                                    <div class="titles">
+                                        Billing Information
+                                    </div>
+                                    <form action="" class="building__form">
+                                        <div class="building__payType">
+                                            <span>
+                                                <input class="custom-radio"  type="radio" id="contactChoice1"
+                                                name="contact">
+                                                <label for="contactChoice1">Pay with Credit Card</label>
+                                            </span>
+                                            <span>
+                                                <input class="custom-radio"  type="radio" id="contactChoice2"
+                                                name="contact">
+                                                <label for="contactChoice2">
+                                                    <img src="./img/PayPal.png" alt="">
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div class="building__cardData">
+                                            <div class="card__data card__data-name" >
+                                                <label for=""> Name on card </label>
+                                                <input oninput="checkValue()" id="cardName" type="text" required>
+                                            </div>
+                                            <div class="card__data card__data-number">
+                                                <label for=""> Card number </label>
+                                                <input oninput="checkValue()" id="number" type="text" required>
+                                            </div>
+                                            <div>
+                                                <div class="card__data card__data-info">
+                                                    <label for=""> Expire date </label>
+                                                    <input oninput="checkValue()" id="date" type="text" required>
+                                                </div>
+                                                <div class="card__data card__data-info">
+                                                    <label for=""> CVV code <span>?</span> </label>
+                                                    <input oninput="checkValue()" id="CVV" type="text" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="building__accept">
+                                            <div class="">
+                                                <input type="checkbox" class="custom-checkbox" id="custom-checkbox1" name="happy">
+                                                <label for="custom-checkbox1">Save information of this credit card</label>
+                                            </div>
+                                            <div class="">
+                                                <input type="checkbox" class="custom-checkbox" id="custom-checkbox2" name="happy">
+                                                <label for="custom-checkbox2"> I accept the &nbsp <span>terms and comditions</span> &nbsp and the &nbsp <span>Privacy Policies</span> </label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="buttons">
+                                        <button class="btn btn-primary buttons__btn-back" onclick="stepper.previous()" type="submit">Back</button>
+                                        <button id="MyButton" class="btn btn-primary buttons__btn-checkOut" onclick="stepper.next()" type="button" >Check Out</button>
+                                    </div>
                                 </div>
-                                <form action="" class="building__form">
-                                    <div class="building__payType">
-                                        <span>
-                                            <input class="custom-radio"  type="radio" id="contactChoice1"
-                                            name="contact" value="email">
-                                            <label for="contactChoice1">Pay with Credit Card</label>
-                                        </span>
-                                        <span>
-                                            <input class="custom-radio"  type="radio" id="contactChoice2"
-                                            name="contact" value="phone">
-                                            <label for="contactChoice2">
-                                                <img src="./img/PayPal.png" alt="">
-                                            </label>
-                                        </span>
-                                    </div>
-                                    <div class="building__cardData">
-                                        <div class="card__data card__data-name">
-                                            <label for=""> Name on card </label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="card__data card__data-number">
-                                            <label for=""> Card number </label>
-                                            <input type="text">
-                                        </div>
-                                        <div>
-                                            <div class="card__data card__data-info">
-                                                <label for=""> Expire date </label>
-                                                <input type="text">
-                                            </div>
-                                            <div class="card__data card__data-info">
-                                                <label for=""> CVV code <span>?</span> </label>
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
                             </div>
-                        </div>
-                        <button class="btn btn-primary" onclick="stepper.next()">Next</button>
-                        <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
                         </div>
                         <div id="test-l-4" class="content">
                             <p class="text-center">test 4</p>
@@ -257,5 +269,6 @@
         var stepperNode = document.querySelector('#stepper')
         var stepper = new Stepper(document.querySelector('#stepper'))
     </script>
+    <script src="./js/form.js"></script>
 </body>
 </html>

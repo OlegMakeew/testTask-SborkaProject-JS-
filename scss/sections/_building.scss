@@ -3,6 +3,27 @@
     &__container {
         max-width: 660px;
         margin: 0 auto;
+        .buttons {
+            margin-top: 40px;
+            @include flex($justify:space-between);
+            button {
+                padding: 8px 30px;
+                border-radius: 3px;
+                box-sizing: border-box;
+                @include font(14px, 400, 24px);
+            }
+            &__btn-back {
+                border: 1px solid #CFCFCF;
+                background: #FFFFFF;
+                color: #000;
+            }
+            &__btn-checkOut {
+                background: #3366FF;
+                color: #fff;
+                border: none;
+            }
+        }
+
     }
     .titles {
         margin-left: 31px;
@@ -91,7 +112,48 @@
                 }
             }
         }
-        
+        .building__accept {
+            margin-top: 41px;
+            padding-left: 31px;
+            div {
+                margin-bottom: 12px;
+            }
+            .custom-checkbox {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+            .custom-checkbox+label {
+                display: inline-flex;
+                align-items: center;
+                user-select: none;
+            }
+            .custom-checkbox+label::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+                flex-grow: 0;
+                background: #FFFFFF;
+                border: 1px solid #CFCFCF;
+                margin-right: 0.5em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+            .custom-checkbox:checked+label::before {
+                background-image: url("../../img/svg/Rectangle.svg");
+            }
+            label {
+                @include font(14px, 400, 16px);
+                color: #8C8C8C;
+                span {
+                    color: #000;
+                }
+            } 
+        }
+
     }
 
 

@@ -275,6 +275,43 @@
   margin: 0 auto;
 }
 
+.building__container .buttons {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.building__container .buttons button {
+  padding: 8px 30px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.building__container .buttons__btn-back {
+  border: 1px solid #CFCFCF;
+  background: #FFFFFF;
+  color: #000;
+}
+
+.building__container .buttons__btn-checkOut {
+  background: #3366FF;
+  color: #fff;
+  border: none;
+}
+
 .building .titles {
   margin-left: 31px;
 }
@@ -424,6 +461,69 @@
 
 .building__form .building__cardData .card__data-info:last-child input {
   margin-right: 0;
+}
+
+.building__form .building__accept {
+  margin-top: 41px;
+  padding-left: 31px;
+}
+
+.building__form .building__accept div {
+  margin-bottom: 12px;
+}
+
+.building__form .building__accept .custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.building__form .building__accept .custom-checkbox + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.building__form .building__accept .custom-checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  background: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.building__form .building__accept .custom-checkbox:checked + label::before {
+  background-image: url("../../img/svg/Rectangle.svg");
+}
+
+.building__form .building__accept label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #8C8C8C;
+}
+
+.building__form .building__accept label span {
+  color: #000;
 }
 
 .building .bs-stepper-header {
