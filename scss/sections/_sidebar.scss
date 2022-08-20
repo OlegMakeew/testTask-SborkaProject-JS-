@@ -2,8 +2,9 @@
     border-left: #CFCFCF 1px solid;
     @include font(14px, 400, 16px);
     min-height: 100vh;
+    width: 30%;
     &__basket, &__promo, &__total {
-        width: 330px;
+        box-sizing: border-box;
         padding: 40px;
         border-bottom: #CFCFCF 1px solid;
     }

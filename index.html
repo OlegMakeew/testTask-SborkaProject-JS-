@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./node_modules/bs-stepper/dist/css/bs-stepper.min.css">
+    <link rel="stylesheet" href="./node_modules/materialize-stepper/dist/css/mstepper.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 </head>
 <body>
     <header class="header">
@@ -63,111 +67,98 @@
     <main class="main">
         <section class="building">
             <div class="building__steper">
-                <div id="stepper" class="bs-stepper linear">
-                    <div class="bs-stepper-header" >
-                        <div class="step" data-target="#test-l-1">
-                            <button type="button" class="step-trigger">
-                                <div class="bs-stepper-circle">1</div>
-                                <div class="bs-stepper-label">Account</div>
-                            </button>
-                        </div>
-                        <div class="bs-stepper-line"></div>
-                        <div class="step" data-target="#test-l-2">
-                        <button type="button" class="step-trigger">
-                            <div class="bs-stepper-circle">2</div>
-                            <div class="bs-stepper-label">Shipping</div>
-                        </button>
-                        </div>
-                        <div class="bs-stepper-line"></div>
-                        <div class="step" data-target="#test-l-3">
-                        <button type="button" class="step-trigger">
-                            <div class="bs-stepper-circle">3</div>
-                            <div class="bs-stepper-label">Billing</div>
-                        </button>
-                        </div>
-                        <div class="bs-stepper-line"></div>
-                        <div class="step" data-target="#test-l-4">
-                        <button type="button" class="step-trigger">
-                            <div class="bs-stepper-circle">4</div>
-                            <div class="bs-stepper-label">Billing</div>
-                        </button>
-                        </div>
-                    </div>
-                    <div class="bs-stepper-content">
-                        <div id="test-l-1" class="content">
-                            <p class="text-center">test 1</p>
-                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
-                        </div>
-                        <div id="test-l-2" class="content">
-                            <p class="text-center">test 1</p>
-                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
-                            <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
-                        </div>
-                        <div id="test-l-3" class="content">
-                            <div class="building__info">
-                                <div class="building__container">
-                                    <div class="titles">
-                                        Billing Information
-                                    </div>
-                                    <form action="" class="building__form">
-                                        <div class="building__payType">
-                                            <span>
-                                                <input class="custom-radio"  type="radio" id="contactChoice1"
-                                                name="contact">
-                                                <label for="contactChoice1">Pay with Credit Card</label>
-                                            </span>
-                                            <span>
-                                                <input class="custom-radio"  type="radio" id="contactChoice2"
-                                                name="contact">
-                                                <label for="contactChoice2">
-                                                    <img src="./img/PayPal.png" alt="">
-                                                </label>
-                                            </span>
-                                        </div>
-                                        <div class="building__cardData">
-                                            <div class="card__data card__data-name" >
-                                                <label for=""> Name on card </label>
-                                                <input oninput="checkValue()" id="cardName" type="text" required>
-                                            </div>
-                                            <div class="card__data card__data-number">
-                                                <label for=""> Card number </label>
-                                                <input oninput="checkValue()" id="number" type="text" required>
-                                            </div>
-                                            <div>
-                                                <div class="card__data card__data-info">
-                                                    <label for=""> Expire date </label>
-                                                    <input oninput="checkValue()" id="date" type="text" required>
-                                                </div>
-                                                <div class="card__data card__data-info">
-                                                    <label for=""> CVV code <span>?</span> </label>
-                                                    <input oninput="checkValue()" id="CVV" type="text" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="building__accept">
-                                            <div class="">
-                                                <input type="checkbox" class="custom-checkbox" id="custom-checkbox1" name="happy">
-                                                <label for="custom-checkbox1">Save information of this credit card</label>
-                                            </div>
-                                            <div class="">
-                                                <input type="checkbox" class="custom-checkbox" id="custom-checkbox2" name="happy">
-                                                <label for="custom-checkbox2"> I accept the &nbsp <span>terms and comditions</span> &nbsp and the &nbsp <span>Privacy Policies</span> </label>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <div class="buttons">
-                                        <button class="btn btn-primary buttons__btn-back" onclick="stepper.previous()" type="submit">Back</button>
-                                        <button id="MyButton" class="btn btn-primary buttons__btn-checkOut" onclick="stepper.next()" type="button" >Check Out</button>
-                                    </div>
+                <div class="card-content">
+                    <ul class="stepper horizontal">
+                        <li class="step">
+                            <div class="step-title waves-effect waves-dark">Account</div>
+                            <div class="step-content">
+                                <div class="step-actions buttons">
+                                    <button class="buttons__btn-back waves-effect waves-dark btn next-step">Check Out</button>
+                                    <button class="buttons__btn-checkOut waves-effect waves-dark btn-flat previous-step">Back</button>
                                 </div>
                             </div>
-                        </div>
-                        <div id="test-l-4" class="content">
-                            <p class="text-center">test 4</p>
-                            <button class="btn btn-primary" onclick="stepper.next()">Next</button>
-                            <button class="btn btn-primary" onclick="stepper.previous()">Previous</button>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-title waves-effect waves-dark">Shipping</div>
+                            <div class="step-content">
+                                <div class="step-actions buttons">
+                                    <button class="buttons__btn-back waves-effect waves-dark btn next-step">Check Out</button>
+                                    <button class="buttons__btn-checkOut waves-effect waves-dark btn-flat previous-step">Back</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-title waves-effect waves-dark">Billing</div>
+                            <div class="step-content buttons">
+                                <div class="building__info">
+                                    <div class="building__container">
+                                        <div class="titles">
+                                            Billing Information
+                                        </div>
+                                        <form action="" class="building__form">
+                                            <div class="building__payType">
+                                                <span>
+                                                    <input class="custom-radio"  type="radio" id="contactChoice1"
+                                                    name="contact">
+                                                    <label for="contactChoice1">Pay with Credit Card</label>
+                                                </span>
+                                                <span>
+                                                    <input class="custom-radio"  type="radio" id="contactChoice2"
+                                                    name="contact">
+                                                    <label for="contactChoice2">
+                                                        <img src="./img/PayPal.png" alt="">
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div class="building__cardData">
+                                                <div class="card__data card__data-name" >
+                                                    <label for=""> Name on card </label>
+                                                    <input oninput="checkValue()" id="cardName" type="text" required>
+                                                </div>
+                                                <div class="card__data card__data-number">
+                                                    <label for=""> Card number </label>
+                                                    <input oninput="checkValue()" id="number" type="text" required>
+                                                </div>
+                                                <div>
+                                                    <div class="card__data card__data-info">
+                                                        <label for=""> Expire date </label>
+                                                        <input oninput="checkValue()" id="date" type="text" required>
+                                                    </div>
+                                                    <div class="card__data card__data-info">
+                                                        <label for=""> CVV code <span>?</span> </label>
+                                                        <input oninput="checkValue()" id="CVV" type="text" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="building__accept">
+                                                <div class="">
+                                                    <input type="checkbox" class="custom-checkbox" id="custom-checkbox1" name="happy">
+                                                    <label for="custom-checkbox1">Save information of this credit card</label>
+                                                </div>
+                                                <div class="">
+                                                    <input type="checkbox" class="custom-checkbox" id="custom-checkbox2" name="happy">
+                                                    <label for="custom-checkbox2"> I accept the &nbsp <span>terms and comditions</span> &nbsp and the &nbsp <span>Privacy Policies</span> </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="step-actions">
+                                    <button class="buttons__btn-back waves-effect waves-dark btn next-step">Check Out</button>
+                                    <button class="buttons__btn-checkOut waves-effect waves-dark btn-flat previous-step">Back</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="step">
+                            <div class="step-title waves-effect waves-dark">Review</div>
+                            <div class="step-content">
+                                <div class="step-actions buttons">
+                                    <button class="buttons__btn-back waves-effect waves-dark btn next-step">Check Out</button>
+                                    <button class="buttons__btn-checkOut waves-effect waves-dark btn-flat previous-step">Back</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -275,12 +266,16 @@
 
 
     <script src="./js/sidebar.js"></script>
-    <script src="./node_modules/bs-stepper/dist/js/bs-stepper.min.js"></script>
-    <!-- <script src="./js/stepper.js"></script> -->
+    <script src="./node_modules/materialize-stepper/dist/js/mstepper.js"></script>
+    
     <script>
-        var stepperNode = document.querySelector('#stepper')
-        var stepper = new Stepper(document.querySelector('#stepper'))
+        let stepper = document.querySelector('.stepper');
+        let stepperInstace = new MStepper(stepper, {
+            firstActive: 0 
+        })
     </script>
     <script src="./js/form.js"></script>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
