@@ -1,5 +1,6 @@
 .building {
     height: 100vh;
+    width: 70%;
     &__container {
         max-width: 660px;
         margin: 0 auto;
@@ -7,9 +8,13 @@
     .titles {
         margin-left: 31px;
     }
+    &__steper {
+        padding-top: 60px;
+    }
     &__form {
         .building__payType {
             padding-left: 31px;
+            margin-bottom: 44px;
             @include flex($justify: flex-start);
             span {
                 @include font(14px, 400, 16px);
@@ -59,8 +64,13 @@
             box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
             border-radius: 5px;
             max-width: 550px;
-            max-height: 300px;
-            padding: 20px 30px 46px;
+            padding: 20px 30px 26px;
+            box-sizing: border-box;
+            @include font(12px, 500, 24px);
+            color: #555770;
+            div {
+                @include flex($justify: flex-start);
+            }
             .card__data {
                 @include flex($align: flex-start);
                 flex-direction: column;
@@ -70,32 +80,90 @@
                     background-color: #EDEDF1;
                     border: none;
                     border-radius: 3px;
+                    margin: 8px 0 20px;
+                }
+                &-info {
+                    input {
+                        margin-right: 30px;
+                        width: 100px;
+                    }
+                    &:last-child {
+                        input {
+                            margin-right: 0;
+                        }
+                    }
                 }
             }
         }
+        .building__accept {
+            margin: 41px 0;
+            padding-left: 31px;
+            div {
+                margin-bottom: 12px;
+            }
+            .custom-checkbox {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+            .custom-checkbox+label {
+                display: inline-flex;
+                align-items: center;
+                user-select: none;
+            }
+            .custom-checkbox+label::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+                flex-grow: 0;
+                background: #FFFFFF;
+                border: 1px solid #CFCFCF;
+                margin-right: 0.5em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+            .custom-checkbox:checked+label::before {
+                background-image: url("../../img/svg/Rectangle.svg");
+            }
+            label {
+                @include font(14px, 400, 16px);
+                color: #8C8C8C;
+                span {
+                    color: #000;
+                }
+            } 
+        }
 
-    }
-
-
-    .bs-stepper-header {
-        @include flex($justify: flex-start, $align:flex-start);
-    }
-    .bs-stepper-circle {
-        height: 5px;
-        width: 20px;
-        border-radius: 50%;
-        @include flex; 
-    }
-    .bs-stepper .line, .bs-stepper-line {
-        -ms-flex: 1 0 32px;
-        flex: 1 0 32px;
-        width: 220px;
-        min-width: 100px;
-        min-height: 1px;
-        background-color: rgba(0,0,0,.12);
+    }  
+    .buttons {
         margin-top: 40px;
+        @include flex($justify:space-between);
+        button {
+            padding: 8px 30px;
+            border-radius: 3px;
+            box-sizing: border-box;
+            @include font(14px, 400, 24px);
+        }
+        &__btn-back {
+            border: 1px solid #CFCFCF;
+            background: #FFFFFF;
+            color: #000;
+        }
+        &__btn-checkOut {
+            background: #3366FF;
+            color: #fff;
+            border: none;
+        }
     }
-    .step-trigger {
-        flex-direction: column;
-    }
-}     
+}
+
+.step-actions {
+    width: 660px;
+    margin: 0 auto;
+    padding-left: 31px;
+    box-sizing: border-box;
+    @include flex($justify: space-between)
+}

@@ -20,17 +20,25 @@
         }
     }
     &__info {
+        div {
+            padding-right: 30px;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
         @include flex($justify: center);
         &-search {
             width: 24px;
             height: 24px;
-            padding-right: 30px;
         }
         &-cart {
             .cart {
                 border: none;
                 background-color: #fff;
             }
+        }
+        &-burger {
+            display: none;
         }
     }
 }
