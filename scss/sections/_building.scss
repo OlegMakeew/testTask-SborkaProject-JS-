@@ -93,7 +93,7 @@
             }
         }
         .building__accept {
-            margin-top: 41px;
+            margin: 41px 0;
             padding-left: 31px;
             div {
                 margin-bottom: 12px;
@@ -155,4 +155,12 @@
             border: none;
         }
     }
+}
+
+.step-actions {
+    width: 660px;
+    margin: 0 auto;
+    padding-left: 31px;
+    box-sizing: border-box;
+    @include flex($justify: space-between)
 }

@@ -99,7 +99,7 @@
                                             <div class="building__payType">
                                                 <span>
                                                     <input class="custom-radio"  type="radio" id="contactChoice1"
-                                                    name="contact">
+                                                    name="contact" required>
                                                     <label for="contactChoice1">Pay with Credit Card</label>
                                                 </span>
                                                 <span>
@@ -113,20 +113,20 @@
                                             <div class="building__cardData">
                                                 <div class="card__data card__data-name" >
                                                     <label for=""> Name on card </label>
-                                                    <input oninput="checkValue()" id="cardName" type="text" required>
+                                                    <input type="text" required>
                                                 </div>
                                                 <div class="card__data card__data-number">
                                                     <label for=""> Card number </label>
-                                                    <input oninput="checkValue()" id="number" type="text" required>
+                                                    <input type="text" required>
                                                 </div>
                                                 <div>
                                                     <div class="card__data card__data-info">
                                                         <label for=""> Expire date </label>
-                                                        <input oninput="checkValue()" id="date" type="text" required>
+                                                        <input type="text" required>
                                                     </div>
                                                     <div class="card__data card__data-info">
                                                         <label for=""> CVV code <span>?</span> </label>
-                                                        <input oninput="checkValue()" id="CVV" type="text" required>
+                                                        <input type="text" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -136,7 +136,7 @@
                                                     <label for="custom-checkbox1">Save information of this credit card</label>
                                                 </div>
                                                 <div class="">
-                                                    <input type="checkbox" class="custom-checkbox" id="custom-checkbox2" name="happy">
+                                                    <input type="checkbox" class="custom-checkbox" id="custom-checkbox2" name="happy" required>
                                                     <label for="custom-checkbox2"> I accept the &nbsp <span>terms and comditions</span> &nbsp and the &nbsp <span>Privacy Policies</span> </label>
                                                 </div>
                                             </div>
@@ -144,8 +144,8 @@
                                     </div>
                                 </div>
                                 <div class="step-actions">
-                                    <button class="buttons__btn-back waves-effect waves-dark btn next-step">Check Out</button>
-                                    <button class="buttons__btn-checkOut waves-effect waves-dark btn-flat previous-step">Back</button>
+                                    <button class="buttons__btn-back waves-effect waves-dark btn-flat previous-step">Back</button>
+                                    <button class="buttons__btn-checkOut waves-effect waves-dark btn next-step">Check Out</button>
                                 </div>
                             </div>
                         </li>
@@ -274,7 +274,6 @@
             firstActive: 0 
         })
     </script>
-    <script src="./js/form.js"></script>
 
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

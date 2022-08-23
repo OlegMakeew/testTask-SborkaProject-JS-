@@ -447,7 +447,7 @@
 }
 
 .building__form .building__accept {
-  margin-top: 41px;
+  margin: 41px 0;
   padding-left: 31px;
 }
 
@@ -544,6 +544,23 @@
   background: #3366FF;
   color: #fff;
   border: none;
+}
+
+.step-actions {
+  width: 660px;
+  margin: 0 auto;
+  padding-left: 31px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body, h3, h4, h5, h6, ul, div, span, p, input, button {
