@@ -73,15 +73,26 @@
           align-items: center;
 }
 
+.header__info div {
+  padding-right: 30px;
+}
+
+.header__info div:last-child {
+  padding-right: 0;
+}
+
 .header__info-search {
   width: 24px;
   height: 24px;
-  padding-right: 30px;
 }
 
 .header__info-cart .cart {
   border: none;
   background-color: #fff;
+}
+
+.header__info-burger {
+  display: none;
 }
 
 .sidebar {
@@ -297,6 +308,10 @@
 
 .building .titles {
   margin-left: 31px;
+}
+
+.building__steper {
+  padding-top: 60px;
 }
 
 .building__form .building__payType {
@@ -595,6 +610,27 @@ body, h3, h4, h5, h6, ul, div, span, p, input, button {
   }
   .sidebar {
     width: 35%;
+  }
+  .step-actions {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    padding: 0 60px;
+  }
+  .building {
+    width: 100%;
+  }
+  .sidebar {
+    display: none;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header__info-burger {
+    display: block;
   }
 }
 /*# sourceMappingURL=index.css.map */
