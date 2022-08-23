@@ -19,3 +19,12 @@ body, h3, h4, h5, h6, ul, div, span, p, input, button {
     @include font(18px, 700, 21px);
     margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 1200px) {
+    .building {
+        width: 65%;
+    }
+    .sidebar {
+        width: 35%;
+    }
+}
